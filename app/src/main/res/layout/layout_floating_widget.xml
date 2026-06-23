@@ -1,162 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/floatingRoot"
-    android:layout_width="220dp"
+    android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:background="@drawable/floating_widget_bg"
     android:elevation="16dp"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="20dp">
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="12dp">
 
-    <!-- Drag handle indicator -->
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/tvCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="05:00"
+        android:textColor="@color/ax_cyan"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <!-- Session remaining -->
+    <TextView
+        android:id="@+id/tvSessionRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60 min remaining"
+        android:textColor="@color/ax_text_secondary"
+        android:textSize="10sp" />
+
+    <!-- Points badge -->
+    <TextView
+        android:id="@+id/tvPointsBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="pts: 0"
+        android:textColor="@color/ax_gold"
+        android:textSize="10sp" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressCycle"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:max="300"
+        android:progress="300"
+        android:progressDrawable="@drawable/progress_bar_track" />
+
+    <!-- Divider -->
     <View
-        android:layout_width="36dp"
-        android:layout_height="3dp"
-        android:layout_marginBottom="12dp"
-        android:background="#44FFFFFF"
-        android:backgroundTint="#44FFFFFF" />
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#44FFFFFF" />
 
-    <!-- ============ TIMER VIEW ============ -->
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/btnAction1"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_float_action"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/ax_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnAction2"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_float_action"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/ax_text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnSuccess"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_float_action"
+            android:gravity="center"
+            android:text="✅"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Hidden fields for compatibility -->
+    <TextView
+        android:id="@+id/tvCycleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Result View (hidden) -->
     <LinearLayout
         android:id="@+id/layoutTimerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:visibility="gone" />
 
-        <!-- Cycle countdown label -->
-        <TextView
-            android:id="@+id/tvCycleLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:letterSpacing="0.2"
-            android:text="CYCLE"
-            android:textAllCaps="true"
-            android:textColor="@color/ax_text_hint"
-            android:textSize="10sp" />
-
-        <!-- Countdown Timer -->
-        <TextView
-            android:id="@+id/tvCountdown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:fontFamily="monospace"
-            android:text="05:00"
-            android:textColor="@color/ax_cyan"
-            android:textSize="42sp"
-            android:textStyle="bold" />
-
-        <!-- Session remaining label -->
-        <TextView
-            android:id="@+id/tvSessionRemaining"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:fontFamily="sans-serif-light"
-            android:text="60 min remaining"
-            android:textColor="@color/ax_text_secondary"
-            android:textSize="11sp" />
-
-        <!-- Points badge -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/badge_points_bg"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:text="pts: "
-                android:textColor="@color/ax_text_hint"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/tvPointsBadge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-bold"
-                android:text="0"
-                android:textColor="@color/ax_gold"
-                android:textSize="10sp" />
-
-        </LinearLayout>
-
-        <!-- Animated Progress Bar -->
-        <ProgressBar
-            android:id="@+id/progressCycle"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="6dp"
-            android:layout_marginTop="14dp"
-            android:max="300"
-            android:progress="300"
-            android:progressDrawable="@drawable/progress_bar_track" />
-
-        <!-- Action Buttons Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <!-- Button 1 -->
-            <TextView
-                android:id="@+id/btnAction1"
-                android:layout_width="0dp"
-                android:layout_height="44dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_float_action"
-                android:fontFamily="sans-serif-bold"
-                android:gravity="center"
-                android:text="1"
-                android:textColor="@color/ax_text_primary"
-                android:textSize="16sp" />
-
-            <!-- Button 2 -->
-            <TextView
-                android:id="@+id/btnAction2"
-                android:layout_width="0dp"
-                android:layout_height="44dp"
-                android:layout_marginHorizontal="2dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_float_action"
-                android:fontFamily="sans-serif-bold"
-                android:gravity="center"
-                android:text="2"
-                android:textColor="@color/ax_text_primary"
-                android:textSize="16sp" />
-
-            <!-- Success Button -->
-            <TextView
-                android:id="@+id/btnSuccess"
-                android:layout_width="0dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_float_action"
-                android:fontFamily="sans-serif-bold"
-                android:gravity="center"
-                android:text="✅"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!-- ============ RESULT VIEW (hidden initially) ============ -->
     <LinearLayout
         android:id="@+id/layoutResultView"
         android:layout_width="match_parent"
@@ -168,43 +131,30 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:letterSpacing="0.2"
             android:text="SESSION COMPLETE"
-            android:textAllCaps="true"
             android:textColor="@color/ax_text_secondary"
             android:textSize="10sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif-light"
-            android:text="Total Points"
-            android:textColor="@color/ax_text_secondary"
-            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/tvTotalPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="sans-serif-black"
             android:text="0"
             android:textColor="@color/ax_gold"
-            android:textSize="56sp" />
+            android:textSize="48sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/btnClose"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/btn_red_close"
-            android:fontFamily="sans-serif-bold"
             android:gravity="center"
             android:text="@string/btn_close"
             android:textColor="@color/ax_text_primary"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

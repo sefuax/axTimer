@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AX Timer</string>
+    <string name="made_by">Made By AX</string>
+    <string name="owner">@axSaaFe</string>
+    <string name="channel">@asklybux</string>
+    <string name="select_duration">Select Session Duration</string>
+    <string name="btn_start">START SESSION</string>
+    <string name="btn_reset">RESET</string>
+    <string name="btn_close">❌  CLOSE</string>
+    <string name="total_points">Total Points</string>
+    <string name="points_earned">Points Earned</string>
+    <string name="timer_running">AX Timer Running</string>
+    <string name="timer_notification_desc">Session timer is active in the background</string>
+    <string name="permission_title">Overlay Permission Required</string>
+    <string name="permission_desc">AX Timer needs permission to display a floating widget over other apps. Please grant the permission on the next screen.</string>
+    <string name="permission_grant">GRANT PERMISSION</string>
+    <string name="channel_id">ax_timer_channel</string>
+    <string name="channel_name">AX Timer Service</string>
+</resources>

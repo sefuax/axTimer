@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dark glass background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:centerColor="#EE0D0D1F"
+                android:endColor="#EE1A0A2E"
+                android:startColor="#EE08080F"
+                android:type="linear" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+    <!-- Glow border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+            <stroke
+                android:width="1.5dp"
+                android:color="#5500E5FF" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+</layer-list>

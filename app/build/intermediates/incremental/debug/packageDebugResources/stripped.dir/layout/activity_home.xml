@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- Header Card -->
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:background="@drawable/glass_card_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="28dp">
+
+            <!-- AX Logo text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="AX"
+                android:textColor="@color/ax_cyan"
+                android:textSize="52sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-light"
+                android:letterSpacing="0.4"
+                android:text="TIMER"
+                android:textAllCaps="true"
+                android:textColor="@color/ax_text_secondary"
+                android:textSize="13sp" />
+
+            <!-- Separator -->
+            <View
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="@color/ax_purple" />
+
+            <!-- Owner info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/owner"
+                    android:textColor="@color/ax_cyan"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/ax_text_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/channel"
+                    android:textColor="@color/ax_purple"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Session Duration Card -->
+        <LinearLayout
+            android:id="@+id/layoutDurationCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@drawable/glass_card_bg"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:text="@string/select_duration"
+                android:textColor="@color/ax_text_secondary"
+                android:textSize="12sp"
+                android:textAllCaps="true" />
+
+            <!-- Row 1: 5, 10, 15 min -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/chip5"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="5 min"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/chip10"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="10 min"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/chip15"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="15 min"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <!-- Row 2: 20, 30, 45 min -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/chip20"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="20 min"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/chip30"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="30 min"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/chip45"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="45 min"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <!-- Row 3: 1h, 2h, 3h -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/chip60"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="1 hour"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/chip120"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginHorizontal="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="2 hours"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/chip180"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/chip_duration"
+                    android:gravity="center"
+                    android:text="3 hours"
+                    android:textColor="@color/ax_text_primary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <!-- Selected label -->
+            <TextView
+                android:id="@+id/tvSelectedDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="Select a duration above"
+                android:textColor="@color/ax_text_hint"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons Card -->
+        <LinearLayout
+            android:id="@+id/layoutButtonsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@drawable/glass_card_bg"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="20dp">
+
+            <TextView
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/btn_cyan_primary"
+                android:fontFamily="sans-serif-bold"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="@string/btn_start"
+                android:textColor="@color/ax_deep_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_outline_secondary"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="@string/btn_reset"
+                android:textColor="@color/ax_cyan"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Info footer -->
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="Timer runs in the background as a floating widget.\nUse any app while your session continues."
+            android:textColor="@color/ax_text_hint"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

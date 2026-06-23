@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <!-- Radial glow behind logo -->
+    <View
+        android:id="@+id/viewGlow"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/glow_circle" />
+
+    <!-- Center container -->
+    <LinearLayout
+        android:id="@+id/layoutSplashContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- AX Logo Icon -->
+        <TextView
+            android:id="@+id/tvSplashLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="AX"
+            android:textColor="@color/ax_cyan"
+            android:textSize="88sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12" />
+
+        <!-- Divider line -->
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/ax_cyan"
+            android:alpha="0" />
+
+        <!-- Made By AX text -->
+        <TextView
+            android:id="@+id/tvMadeBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="0"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.3"
+            android:text="@string/made_by"
+            android:textAllCaps="true"
+            android:textColor="@color/ax_text_secondary"
+            android:textSize="14sp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSplashOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:alpha="0"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.15"
+            android:text="@string/owner"
+            android:textColor="@color/ax_purple"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Loading dots at bottom -->
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:alpha="0"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/dot_active" />
+
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/dot_inactive" />
+
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/dot_inactive" />
+
+    </LinearLayout>
+
+</FrameLayout>

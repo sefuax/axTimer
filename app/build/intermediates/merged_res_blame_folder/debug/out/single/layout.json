@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.ax.axtimer.app-mergeDebugResources-32:/layout/activity_splash.xml",
+        "source": "com.ax.axtimer.app-main-35:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-mergeDebugResources-32:/layout/activity_permission.xml",
+        "source": "com.ax.axtimer.app-main-35:/layout/activity_permission.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-mergeDebugResources-32:/layout/activity_home.xml",
+        "source": "com.ax.axtimer.app-main-35:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-mergeDebugResources-32:/layout/layout_floating_widget.xml",
+        "source": "com.ax.axtimer.app-main-35:/layout/layout_floating_widget.xml"
+    }
+]

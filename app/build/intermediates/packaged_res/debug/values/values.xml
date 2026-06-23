@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ax_card">#1A1A2E</color>
+    <color name="ax_cyan">#00E5FF</color>
+    <color name="ax_cyan_dim">#0097A7</color>
+    <color name="ax_cyan_glow">#1A00E5FF</color>
+    <color name="ax_deep_black">#080810</color>
+    <color name="ax_gold">#FFD700</color>
+    <color name="ax_green">#00E676</color>
+    <color name="ax_magenta">#E040FB</color>
+    <color name="ax_purple">#7C4DFF</color>
+    <color name="ax_purple_dim">#512DA8</color>
+    <color name="ax_red">#FF1744</color>
+    <color name="ax_surface">#0F0F1A</color>
+    <color name="ax_surface_variant">#161625</color>
+    <color name="ax_text_hint">#546E7A</color>
+    <color name="ax_text_primary">#FFFFFF</color>
+    <color name="ax_text_secondary">#B0BEC5</color>
+    <color name="btn_selected_bg">#2200E5FF</color>
+    <color name="btn_unselected_bg">#111827</color>
+    <color name="glass_bg">#22FFFFFF</color>
+    <color name="glass_border">#33FFFFFF</color>
+    <color name="notification_color">#00E5FF</color>
+    <color name="overlay_dim">#CC000000</color>
+    <string name="app_name">AX Timer</string>
+    <string name="btn_close">❌  CLOSE</string>
+    <string name="btn_reset">RESET</string>
+    <string name="btn_start">START SESSION</string>
+    <string name="channel">@asklybux</string>
+    <string name="channel_id">ax_timer_channel</string>
+    <string name="channel_name">AX Timer Service</string>
+    <string name="made_by">Made By AX</string>
+    <string name="owner">@axSaaFe</string>
+    <string name="permission_desc">AX Timer needs permission to display a floating widget over other apps. Please grant the permission on the next screen.</string>
+    <string name="permission_grant">GRANT PERMISSION</string>
+    <string name="permission_title">Overlay Permission Required</string>
+    <string name="points_earned">Points Earned</string>
+    <string name="select_duration">Select Session Duration</string>
+    <string name="timer_notification_desc">Session timer is active in the background</string>
+    <string name="timer_running">AX Timer Running</string>
+    <string name="total_points">Total Points</string>
+    <style name="Theme.AXTimer" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ax_cyan</item>
+        <item name="colorPrimaryVariant">@color/ax_cyan_dim</item>
+        <item name="colorOnPrimary">@color/ax_deep_black</item>
+        <item name="colorSecondary">@color/ax_purple</item>
+        <item name="colorOnSecondary">@color/ax_text_primary</item>
+        <item name="colorSurface">@color/ax_surface</item>
+        <item name="colorOnSurface">@color/ax_text_primary</item>
+        <item name="colorBackground">@color/ax_deep_black</item>
+        <item name="colorOnBackground">@color/ax_text_primary</item>
+        <item name="android:windowBackground">@color/ax_deep_black</item>
+        <item name="android:statusBarColor">@color/ax_deep_black</item>
+        <item name="android:navigationBarColor">@color/ax_deep_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Theme.AXTimer.Splash" parent="Theme.AXTimer">
+        <item name="android:windowBackground">@color/ax_deep_black</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

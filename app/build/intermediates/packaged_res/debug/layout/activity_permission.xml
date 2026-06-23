@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="AX"
+        android:textColor="@color/ax_cyan"
+        android:textSize="64sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-bold"
+        android:gravity="center"
+        android:text="@string/permission_title"
+        android:textColor="@color/ax_text_primary"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/permission_desc"
+        android:textColor="@color/ax_text_secondary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/btnGrantPermission"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_cyan_primary"
+        android:fontFamily="sans-serif-bold"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:text="@string/permission_grant"
+        android:textColor="@color/ax_deep_black"
+        android:textSize="15sp" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_dot_inactive.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/dot_inactive.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/layout_activity_splash.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_badge_points_bg.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/badge_points_bg.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/anim_fade_in.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_glass_card_bg.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/glass_card_bg.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_dot_active.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/dot_active.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/layout_activity_home.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_ic_launcher.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/anim_slide_up.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/anim/slide_up.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_btn_cyan_primary.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/btn_cyan_primary.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_glow_circle.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/glow_circle.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_chip_duration.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/chip_duration.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_btn_float_action.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/btn_float_action.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_floating_widget_bg.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/floating_widget_bg.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_btn_red_close.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/btn_red_close.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/layout_activity_permission.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/layout/activity_permission.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/layout_layout_floating_widget.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/layout/layout_floating_widget.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/anim_fade_out.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/anim/fade_out.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_gradient_bg.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/gradient_bg.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_progress_bar_track.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/progress_bar_track.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_ic_notif.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/ic_notif.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/anim_scale_up.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/anim/scale_up.xml"
+    },
+    {
+        "merged": "com.ax.axtimer.app-merged_res-33:/drawable_btn_outline_secondary.xml.flat",
+        "source": "com.ax.axtimer.app-main-35:/drawable/btn_outline_secondary.xml"
+    }
+]

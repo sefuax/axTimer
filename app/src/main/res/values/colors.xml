@@ -12,4 +12,5 @@
     <color name="ax_text_secondary">#FFB0BEC5</color>
     <color name="ax_text_hint">#FF607D8B</color>
     <color name="ax_deep_black">#FF000000</color>
+    <color name="ax_gold">#FFFFC107</color>
 </resources>

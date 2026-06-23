@@ -6,4 +6,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ax_cyan">#FF00BCD4</color>
+    <color name="ax_purple">#FF9C27B0</color>
+    <color name="ax_text_primary">#FFFFFFFF</color>
+    <color name="ax_text_secondary">#FFB0BEC5</color>
+    <color name="ax_text_hint">#FF607D8B</color>
+    <color name="ax_deep_black">#FF000000</color>
 </resources>

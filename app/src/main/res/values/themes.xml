@@ -8,4 +8,7 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
     </style>
+
+    <style name="Theme.AXTimer.Splash" parent="Theme.AXTimer">
+    </style>
 </resources>

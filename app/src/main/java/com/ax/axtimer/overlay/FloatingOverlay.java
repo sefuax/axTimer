@@ -88,9 +88,6 @@ public class FloatingOverlay {
         layoutParams.x = 40;
         layoutParams.y = 200;
 
-        // Toggle button click
-        btnToggle.setOnClickListener(v -> toggleWidget());
-
         setupButtons();
         setupDrag();
 
@@ -159,15 +156,22 @@ public class FloatingOverlay {
     }
 
     private void handleButton(int buttonId) {
+        // +1 point for every button press
+        totalPoints += 1;
+        tvPointsBadge.setText("pts: " + totalPoints);
+        flashPointsBadge();
+
         boolean wasActive = (buttonId == 1) ? btn1Active : btn2Active;
         if (buttonId == 1) { btn1Active = !btn1Active; btn2Active = false; }
         else { btn2Active = !btn2Active; btn1Active = false; }
+
         updateButtonVisuals();
         animateButtonTap(buttonId == 1 ? btnAction1 : btnAction2);
+
+        // Combo: 1→2 or 2→1 = extra +1 point (total +2 for combo)
         if (!wasActive && lastButtonPress != 0 && lastButtonPress != buttonId) {
-            totalPoints += 2;
+            totalPoints += 1; // extra combo point
             tvPointsBadge.setText("pts: " + totalPoints);
-            flashPointsBadge();
             btn1Active = false; btn2Active = false; lastButtonPress = 0;
             updateButtonVisuals();
             callback.onComboAchieved();
@@ -192,13 +196,17 @@ public class FloatingOverlay {
     }
 
     private void setupDrag() {
-        overlayView.setOnTouchListener((v, event) -> {
+        // Drag via + button (btnToggle)
+        btnToggle.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    initialX = layoutParams.x; initialY = layoutParams.y;
-                    initialTouchX = event.getRawX(); initialTouchY = event.getRawY();
+                    initialX = layoutParams.x;
+                    initialY = layoutParams.y;
+                    initialTouchX = event.getRawX();
+                    initialTouchY = event.getRawY();
                     isDragging = false;
                     return true;
+
                 case MotionEvent.ACTION_MOVE:
                     float dx = event.getRawX() - initialTouchX;
                     float dy = event.getRawY() - initialTouchY;
@@ -209,10 +217,15 @@ public class FloatingOverlay {
                         windowManager.updateViewLayout(overlayView, layoutParams);
                     }
                     return true;
+
                 case MotionEvent.ACTION_UP:
-                    if (isDragging) { snapToEdge(); return true; }
-                    v.performClick();
-                    return false;
+                    if (isDragging) {
+                        snapToEdge();
+                    } else {
+                        // Short tap = toggle
+                        toggleWidget();
+                    }
+                    return true;
             }
             return false;
         });

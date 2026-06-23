@@ -16,24 +16,16 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Download Gradle Wrapper JAR
-        run: |
-          curl -L -o gradle/wrapper/gradle-wrapper.jar \
-          "https://repo1.maven.org/maven2/org/gradle/gradle/8.4/gradle-8.4-wrapper.jar" || \
-          curl -L -o gradle/wrapper/gradle-wrapper.jar \
-          "https://services.gradle.org/distributions/gradle-8.4-bin.zip" && \
-          unzip -p gradle/wrapper/gradle-wrapper.jar || true
-          wget -O gradle/wrapper/gradle-wrapper.jar \
-          "https://raw.githubusercontent.com/gradle/gradle/v8.4.0/gradle/wrapper/gradle-wrapper.jar"
-
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Make gradlew executable
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.4'
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
